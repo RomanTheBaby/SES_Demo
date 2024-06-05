@@ -7,15 +7,14 @@
 
 import UIKit
 
+// TODO: Task to 
+
 class ShoppingListViewController: UIViewController {
     
     // MARK: - Properties
     
-    private lazy var showWeatherButton: UIButton = {
-        let button = UIButton()
-        button.translatesAutoresizingMaskIntoConstraints = false
-        return button
-    }()
+    private let weatherInfoView = WeatherInfoView()
+    private let showWeatherButton: UIButton = UIButton()
     
     // MARK: - Lifecycle
 
@@ -28,6 +27,7 @@ class ShoppingListViewController: UIViewController {
     // MARK: - UI Setup
     
     private func setupInterface() {
+        setupWeatherInfoView(weatherInfoView)
         setupWeatherButton(showWeatherButton)
     }
 
@@ -37,6 +37,7 @@ class ShoppingListViewController: UIViewController {
         configuration.cornerStyle = .small // Task to change corner radius
         button.configuration = configuration
         
+        button.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(button)
         NSLayoutConstraint.activate([
             button.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 0.8),
@@ -46,6 +47,33 @@ class ShoppingListViewController: UIViewController {
         ])
         
         button.addTarget(self, action: #selector(handleShowWeatherPressEnded(_:)), for: .touchUpInside)
+        
+        // Task to hide button when it is pressed
+    }
+    
+    private func setupWeatherInfoView(_ view: WeatherInfoView) {
+        // TODO: Task to add this line, hidden until weather
+        view.translatesAutoresizingMaskIntoConstraints = false
+        self.view.addSubview(view)
+        
+        
+        // TODO: Task with shadow and corner radius
+        view.layer.borderWidth = 1 / UIScreen.main.scale
+        view.layer.borderColor = UIColor.black.cgColor
+        view.layer.cornerRadius = 8
+        view.layer.shadowRadius = 5
+        view.layer.shadowColor = UIColor.black.withAlphaComponent(0.5).cgColor
+        view.layer.shadowOffset = CGSize(width: 5, height: 5)
+//        view.layer.masksToBounds = true
+        
+        NSLayoutConstraint.activate([
+            view.widthAnchor.constraint(equalToConstant: 200),
+            view.heightAnchor.constraint(equalToConstant: 150),
+            view.centerXAnchor.constraint(equalTo: self.view.centerXAnchor),
+            view.centerYAnchor.constraint(equalTo: self.view.centerYAnchor),
+        ])
+        
+        view.update(for: WeatherInformation(cityName: "City", temperature: "--", systemImageName: "rain"))
     }
     
     // MARK: - Action Handling

@@ -9,19 +9,29 @@
 /* Begin PBXBuildFile section */
 		FEE0E43B2C11009C00303059 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEE0E43A2C11009C00303059 /* AppDelegate.swift */; };
 		FEE0E43D2C11009C00303059 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEE0E43C2C11009C00303059 /* SceneDelegate.swift */; };
-		FEE0E43F2C11009C00303059 /* ShoppingListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEE0E43E2C11009C00303059 /* ShoppingListViewController.swift */; };
+		FEE0E43F2C11009C00303059 /* WeatherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEE0E43E2C11009C00303059 /* WeatherViewController.swift */; };
 		FEE0E4442C11009D00303059 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FEE0E4432C11009D00303059 /* Assets.xcassets */; };
 		FEE0E4472C11009D00303059 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = FEE0E4462C11009D00303059 /* Base */; };
+		FEE0E4562C110B9900303059 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEE0E4552C110B9900303059 /* NetworkService.swift */; };
+		FEE0E4582C110BAE00303059 /* WeatherInformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEE0E4572C110BAE00303059 /* WeatherInformation.swift */; };
+		FEE0E45D2C110E4100303059 /* WeatherService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEE0E45C2C110E4100303059 /* WeatherService.swift */; };
+		FEE0E45F2C110F7F00303059 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEE0E45E2C110F7F00303059 /* LocationManager.swift */; };
+		FEE0E4622C11148C00303059 /* WeatherInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEE0E4612C11148C00303059 /* WeatherInfoView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		FEE0E4372C11009C00303059 /* ShopyFlopy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ShopyFlopy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FEE0E43A2C11009C00303059 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FEE0E43C2C11009C00303059 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		FEE0E43E2C11009C00303059 /* ShoppingListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingListViewController.swift; sourceTree = "<group>"; };
+		FEE0E43E2C11009C00303059 /* WeatherViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherViewController.swift; sourceTree = "<group>"; };
 		FEE0E4432C11009D00303059 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FEE0E4462C11009D00303059 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FEE0E4482C11009D00303059 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FEE0E4552C110B9900303059 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		FEE0E4572C110BAE00303059 /* WeatherInformation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherInformation.swift; sourceTree = "<group>"; };
+		FEE0E45C2C110E4100303059 /* WeatherService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherService.swift; sourceTree = "<group>"; };
+		FEE0E45E2C110F7F00303059 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
+		FEE0E4612C11148C00303059 /* WeatherInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherInfoView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,7 +75,7 @@
 			isa = PBXGroup;
 			children = (
 				FEE0E4452C11009D00303059 /* LaunchScreen.storyboard */,
-				FEE0E43E2C11009C00303059 /* ShoppingListViewController.swift */,
+				FEE0E43E2C11009C00303059 /* WeatherViewController.swift */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -82,6 +92,8 @@
 		FEE0E4502C1100C700303059 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				FEE0E4602C11148400303059 /* Views */,
+				FEE0E45B2C110E1B00303059 /* Extensions */,
 				FEE0E4522C110B6000303059 /* Models */,
 				FEE0E4512C110B5B00303059 /* Services */,
 				FEE0E4432C11009D00303059 /* Assets.xcassets */,
@@ -93,6 +105,9 @@
 		FEE0E4512C110B5B00303059 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				FEE0E4552C110B9900303059 /* NetworkService.swift */,
+				FEE0E45C2C110E4100303059 /* WeatherService.swift */,
+				FEE0E45E2C110F7F00303059 /* LocationManager.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -100,8 +115,24 @@
 		FEE0E4522C110B6000303059 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				FEE0E4572C110BAE00303059 /* WeatherInformation.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		FEE0E45B2C110E1B00303059 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		FEE0E4602C11148400303059 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				FEE0E4612C11148C00303059 /* WeatherInfoView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -174,8 +205,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FEE0E43F2C11009C00303059 /* ShoppingListViewController.swift in Sources */,
+				FEE0E4582C110BAE00303059 /* WeatherInformation.swift in Sources */,
+				FEE0E43F2C11009C00303059 /* WeatherViewController.swift in Sources */,
 				FEE0E43B2C11009C00303059 /* AppDelegate.swift in Sources */,
+				FEE0E45F2C110F7F00303059 /* LocationManager.swift in Sources */,
+				FEE0E4622C11148C00303059 /* WeatherInfoView.swift in Sources */,
+				FEE0E4562C110B9900303059 /* NetworkService.swift in Sources */,
+				FEE0E45D2C110E4100303059 /* WeatherService.swift in Sources */,
 				FEE0E43D2C11009C00303059 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

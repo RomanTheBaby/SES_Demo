@@ -10,5 +10,15 @@ import Foundation
 struct WeatherInformation: Decodable {
     var cityName: String
     var temperature: String
-    var systemImageName: String
+    var title: String
+    var description: String
+    var backgroundImageURL: URL? = nil
+    
+    var hourlyData: [HourlyData]?
+    
+    struct HourlyData: Decodable {
+        var time: String
+        var imageName: String
+        var temperature: String
+    }
 }

@@ -35,6 +35,10 @@ class WeatherService {
         }
     }
     
+    func fetchHourlyForecast(_ completion: (() -> Void)) {
+        
+    }
+    
     // TASK to implement this method
     private func parseInfo(from data: Data) -> WeatherInformation? {
         // TODO: parse this later

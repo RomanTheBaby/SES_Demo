@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FEBC2B362C13E8630090618B /* WeatherView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEBC2B352C13E8630090618B /* WeatherView.swift */; };
 		FEE0E43B2C11009C00303059 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEE0E43A2C11009C00303059 /* AppDelegate.swift */; };
 		FEE0E43D2C11009C00303059 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEE0E43C2C11009C00303059 /* SceneDelegate.swift */; };
 		FEE0E43F2C11009C00303059 /* WeatherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEE0E43E2C11009C00303059 /* WeatherViewController.swift */; };
@@ -20,6 +21,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		FEBC2B352C13E8630090618B /* WeatherView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherView.swift; sourceTree = "<group>"; };
 		FEE0E4372C11009C00303059 /* ShopyFlopy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ShopyFlopy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FEE0E43A2C11009C00303059 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FEE0E43C2C11009C00303059 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -76,6 +78,7 @@
 			children = (
 				FEE0E4452C11009D00303059 /* LaunchScreen.storyboard */,
 				FEE0E43E2C11009C00303059 /* WeatherViewController.swift */,
+				FEBC2B352C13E8630090618B /* WeatherView.swift */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -211,6 +214,7 @@
 				FEE0E45F2C110F7F00303059 /* LocationManager.swift in Sources */,
 				FEE0E4622C11148C00303059 /* WeatherInfoView.swift in Sources */,
 				FEE0E4562C110B9900303059 /* NetworkService.swift in Sources */,
+				FEBC2B362C13E8630090618B /* WeatherView.swift in Sources */,
 				FEE0E45D2C110E4100303059 /* WeatherService.swift in Sources */,
 				FEE0E43D2C11009C00303059 /* SceneDelegate.swift in Sources */,
 			);

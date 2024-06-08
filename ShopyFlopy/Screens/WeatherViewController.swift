@@ -15,6 +15,7 @@ class ShoppingListViewController: UIViewController {
     
     private let weatherInfoView = WeatherInfoView()
     private let showWeatherButton: UIButton = UIButton()
+    private let headlineLabel: UILabel = UILabel()
     
     // MARK: - Lifecycle
 
@@ -27,20 +28,37 @@ class ShoppingListViewController: UIViewController {
     // MARK: - UI Setup
     
     private func setupInterface() {
-        setupWeatherInfoView(weatherInfoView)
+        setupHeadlineLabel(headlineLabel)
         setupWeatherButton(showWeatherButton)
+        setupWeatherInfoView(weatherInfoView)
+    }
+    
+    private func setupHeadlineLabel(_ label: UILabel) {
+        label.text = "TODAY"
+        label.font = UIFont.preferredFont(forTextStyle: .largeTitle)
+        
+        label.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(label)
+        
+        NSLayoutConstraint.activate([
+            label.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            label.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 16),
+        ])
     }
 
     private func setupWeatherButton(_ button: UIButton) {
-        var configuration = UIButton.Configuration.filled()
-        configuration.title = "Show Weather" // Task to change title
+        var configuration = UIButton.Configuration.plain()
+        configuration.image = UIImage(systemName: "arrow.counterclockwise")
+        configuration.imagePadding = 8
+        configuration.imagePlacement = .trailing
+        configuration.title = "retry" // Task to change title
         configuration.cornerStyle = .small // Task to change corner radius
         button.configuration = configuration
         
         button.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(button)
         NSLayoutConstraint.activate([
-            button.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 0.8),
+            button.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 0.30),
             button.heightAnchor.constraint(equalToConstant: 50),
             button.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -16),
             button.centerXAnchor.constraint(equalTo: view.centerXAnchor),
@@ -56,24 +74,22 @@ class ShoppingListViewController: UIViewController {
         view.translatesAutoresizingMaskIntoConstraints = false
         self.view.addSubview(view)
         
-        
         // TODO: Task with shadow and corner radius
-        view.layer.borderWidth = 1 / UIScreen.main.scale
-        view.layer.borderColor = UIColor.black.cgColor
-        view.layer.cornerRadius = 8
-        view.layer.shadowRadius = 5
-        view.layer.shadowColor = UIColor.black.withAlphaComponent(0.5).cgColor
-        view.layer.shadowOffset = CGSize(width: 5, height: 5)
+//        view.layer.borderWidth = 1 / UIScreen.main.scale
+//        view.layer.borderColor = UIColor.black.cgColor
+//        view.layer.cornerRadius = 8
+//        view.layer.shadowRadius = 5
+//        view.layer.shadowColor = UIColor.black.withAlphaComponent(0.5).cgColor
+//        view.layer.shadowOffset = CGSize(width: 5, height: 5)
 //        view.layer.masksToBounds = true
         
         NSLayoutConstraint.activate([
-            view.widthAnchor.constraint(equalToConstant: 200),
-            view.heightAnchor.constraint(equalToConstant: 150),
+            view.leadingAnchor.constraint(equalTo: self.view.leadingAnchor, constant: 16),
             view.centerXAnchor.constraint(equalTo: self.view.centerXAnchor),
-            view.centerYAnchor.constraint(equalTo: self.view.centerYAnchor),
+            view.bottomAnchor.constraint(equalTo: showWeatherButton.topAnchor, constant: -16),
         ])
         
-        view.update(for: WeatherInformation(cityName: "City", temperature: "--", systemImageName: "rain"))
+        view.update(for: WeatherInformation(cityName: "City", temperature: "20°", title: "Partly Cloudly", description: "Mostly clouds with the slight breeze of the sun", backgroundImageURL: nil))
     }
     
     // MARK: - Action Handling

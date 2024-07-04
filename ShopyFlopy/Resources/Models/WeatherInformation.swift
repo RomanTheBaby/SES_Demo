@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct WeatherInformation: Decodable {
+struct WeatherInformation: Codable {
     var cityName: String
     var temperature: String
     var title: String
@@ -16,7 +16,7 @@ struct WeatherInformation: Decodable {
     
     var hourlyData: [HourlyData]?
     
-    struct HourlyData: Decodable {
+    struct HourlyData: Codable {
         var time: String
         var imageName: String
         var temperature: String

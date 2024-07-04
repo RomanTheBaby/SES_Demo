@@ -35,11 +35,22 @@ class WeatherService {
         }
     }
     
+    func fetchWeather() async throws -> WeatherInformation? {
+        guard let currentCoordinates = LocationManager.shared.currentLocation?.coordinate else {
+            return nil
+        }
+        
+        let requestString = "https://www.weatherspier.com?latitude=\(currentCoordinates.latitude)&latitude=\(currentCoordinates.latitude)"
+        let url = URL(string: requestString)!
+        // TODO: add weak self as task??
+        let data = try await networkService.makeRequest(URLRequest(url: url))
+        return try! decoder.decode(WeatherInformation.self, from: data)
+    }
+    
     func fetchHourlyForecast(_ completion: (() -> Void)) {
         
     }
     
-    // TASK to implement this method
     private func parseInfo(from data: Data) -> WeatherInformation? {
         // TODO: parse this later
         try? decoder.decode(WeatherInformation.self, from: data)

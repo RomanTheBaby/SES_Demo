@@ -18,6 +18,8 @@
 		FEE0E45D2C110E4100303059 /* WeatherService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEE0E45C2C110E4100303059 /* WeatherService.swift */; };
 		FEE0E45F2C110F7F00303059 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEE0E45E2C110F7F00303059 /* LocationManager.swift */; };
 		FEE0E4622C11148C00303059 /* WeatherInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEE0E4612C11148C00303059 /* WeatherInfoView.swift */; };
+		FEF67E5A2C3639180058BE52 /* WeatherSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEF67E592C3639180058BE52 /* WeatherSpy.swift */; };
+		FEF67E5C2C363D6D0058BE52 /* WeatherSpyAppViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEF67E5B2C363D6D0058BE52 /* WeatherSpyAppViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +36,8 @@
 		FEE0E45C2C110E4100303059 /* WeatherService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherService.swift; sourceTree = "<group>"; };
 		FEE0E45E2C110F7F00303059 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		FEE0E4612C11148C00303059 /* WeatherInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherInfoView.swift; sourceTree = "<group>"; };
+		FEF67E592C3639180058BE52 /* WeatherSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherSpy.swift; sourceTree = "<group>"; };
+		FEF67E5B2C363D6D0058BE52 /* WeatherSpyAppViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherSpyAppViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +92,8 @@
 			children = (
 				FEE0E43A2C11009C00303059 /* AppDelegate.swift */,
 				FEE0E43C2C11009C00303059 /* SceneDelegate.swift */,
+				FEF67E592C3639180058BE52 /* WeatherSpy.swift */,
+				FEF67E5B2C363D6D0058BE52 /* WeatherSpyAppViewModel.swift */,
 			);
 			path = App;
 			sourceTree = "<group>";
@@ -213,9 +219,11 @@
 				FEE0E43B2C11009C00303059 /* AppDelegate.swift in Sources */,
 				FEE0E45F2C110F7F00303059 /* LocationManager.swift in Sources */,
 				FEE0E4622C11148C00303059 /* WeatherInfoView.swift in Sources */,
+				FEF67E5A2C3639180058BE52 /* WeatherSpy.swift in Sources */,
 				FEE0E4562C110B9900303059 /* NetworkService.swift in Sources */,
 				FEBC2B362C13E8630090618B /* WeatherView.swift in Sources */,
 				FEE0E45D2C110E4100303059 /* WeatherService.swift in Sources */,
+				FEF67E5C2C363D6D0058BE52 /* WeatherSpyAppViewModel.swift in Sources */,
 				FEE0E43D2C11009C00303059 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

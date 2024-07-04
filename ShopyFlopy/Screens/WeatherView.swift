@@ -28,12 +28,15 @@ struct WeatherView: View {
                 
                 Text("TODAY") // Task capitalized
                     .fontWeight(.bold)
-                    .font(.title3) // task
+                    .font(.largeTitle) // task
                     .tracking(5) // task
                 
-                //            Spacer() // Task
+//                Spacer() // Task
                 
                 Image(systemName: "globe")
+                    .padding(.top, 24)
+                
+                Spacer()
                 
                 HStack {
                     Text(weatherInformation.temperature)
@@ -42,14 +45,14 @@ struct WeatherView: View {
                     
                     VStack {
                         Text(weatherInformation.title)
-                            .frame(alignment: .leading) // task - proper alignment
+                            .frame(alignment: .leading)
                             .fontWeight(.heavy) // task
                         Text(weatherInformation.description) // lines count text
                     }
                 }
                 
                 //            Spacer() // Task
-                //            Divider() // Task
+                Divider() // Task
                 
                 if let items = weatherInformation.hourlyData {
                     HStack(spacing: 16) {
